@@ -1,0 +1,8 @@
+# A sample Guardfile
+# More info at https://github.com/guard/guard#readme
+
+guard :jasmine_node do
+  watch('anagram.js')
+  watch('anagram_test.spec.js')
+end
+
