@@ -22,17 +22,17 @@ describe("PhoneNumber", function() {
     expect(phone.number()).toEqual("0000000000");
   });
 
-  xit("invalid when 9 digits", function() {
+  it("invalid when 9 digits", function() {
     var phone = new Phone("123456789");
     expect(phone.number()).toEqual("0000000000");
   });
 
-  xit("has an area code", function() {
+  it("has an area code", function() {
     var phone = new Phone("1234567890");
     expect(phone.areaCode()).toEqual("123");
   });
 
-  xit("has an area code", function() {
+  it("has an area code", function() {
     var phone = new Phone("1234567890");
     expect(phone.toString()).toEqual("(123) 456-7890");
   });

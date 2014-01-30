@@ -2,7 +2,7 @@ var DNA = function(sequence){
 
   var sequenceDifference = function(first, second){
     var count = 0, length = Math.min(first.length, second.length)
-    for(var i=0; i<length; i++){
+    for(length; length>0; length--){
       if(first[i] != second[i]){
         count++;
       }
