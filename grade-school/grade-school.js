@@ -14,6 +14,9 @@ function School(){
     }
   }
 
+  this.grade = function(){
+  }
+
 }
 
 module.exports = School;
