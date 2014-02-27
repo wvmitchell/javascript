@@ -1,10 +1,13 @@
 function School(){
 
+  var roster = {}
+
   this.roster = function(){
-    return {};
+    return roster;
   }
 
-  this.add = function(){
+  this.add = function(name, grade){
+    roster[grade] = [name];
   }
 
 }
