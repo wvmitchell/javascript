@@ -1,26 +1,30 @@
-function Phone(raw_number) {
+function Phone(rawNumber) {
+
+  var digits =  cleanNumber(rawNumber);
 
   this.number = function(){
-    var digits = raw_number.replace(/\D/g, "");
-    digits = removeUSCountryCode(digits);
-    digits = replaceInvalidNumbers(digits);
-    return digits;
+    return digits
   }
 
-  var DIGITS = this.number();
-
   this.areaCode = function(){
-    return DIGITS.slice(0,3)
+    return digits.slice(0,3)
   }
 
   this.toString = function(){
     var phone_string = "(";
     phone_string += this.areaCode();
     phone_string += ") ";
-    phone_string += DIGITS.slice(3,6);
+    phone_string += digits.slice(3,6);
     phone_string += "-";
-    phone_string += DIGITS.slice(6,10);
+    phone_string += digits.slice(6,10);
     return phone_string;
+  }
+
+  function cleanNumber(rawNumber){
+    var digits = rawNumber.replace(/\D/g, "");
+    digits = removeUSCountryCode(digits);
+    digits = replaceInvalidNumber(digits);
+    return digits;
   }
 
   function removeUSCountryCode(number){
@@ -31,7 +35,7 @@ function Phone(raw_number) {
     }
   }
 
-  function replaceInvalidNumbers(number){
+  function replaceInvalidNumber(number){
     if(!valid(number)){
       return '0000000000';
     } else {
