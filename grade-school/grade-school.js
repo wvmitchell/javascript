@@ -15,7 +15,11 @@ function School(){
   }
 
   this.grade = function(grade){
-    return roster[grade].sort();
+    if(roster[grade] != null){
+      return roster[grade].sort();
+    } else {
+      return [];
+    }
   }
 
 }
