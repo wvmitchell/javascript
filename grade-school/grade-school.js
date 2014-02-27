@@ -1,6 +1,10 @@
 function School(){
 
   this.roster = function(){
+    return {};
+  }
+
+  this.add = function(){
   }
 
 }
