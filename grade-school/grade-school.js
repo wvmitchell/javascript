@@ -7,7 +7,11 @@ function School(){
   }
 
   this.add = function(name, grade){
-    roster[grade] = [name];
+    if(roster[grade] != null){
+      roster[grade].push(name);
+    } else {
+      roster[grade] = [name];
+    }
   }
 
 }
