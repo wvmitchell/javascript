@@ -9,6 +9,7 @@ function School(){
   this.add = function(name, grade){
     if(roster[grade] != null){
       roster[grade].push(name);
+      roster[grade] = roster[grade].sort();
     } else {
       roster[grade] = [name];
     }
@@ -16,7 +17,7 @@ function School(){
 
   this.grade = function(grade){
     if(roster[grade] != null){
-      return roster[grade].sort();
+      return roster[grade];
     } else {
       return [];
     }
