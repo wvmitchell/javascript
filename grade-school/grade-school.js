@@ -14,7 +14,8 @@ function School(){
     }
   }
 
-  this.grade = function(){
+  this.grade = function(grade){
+    return roster[grade].sort();
   }
 
 }
