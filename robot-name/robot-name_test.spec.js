@@ -11,13 +11,13 @@ describe("Robot", function() {
     expect(robot.name).toEqual(robot.name);
   });
 
-  xit("different robots have different names", function() {
+  it("different robots have different names", function() {
     var robotOne = new Robot();
     var robotTwo = new Robot();
     expect(robotOne.name).not.toEqual(robotTwo.name);
   });
 
-  xit("is able to reset the name", function() {
+  it("is able to reset the name", function() {
     var robot = new Robot();
     var originalName = robot.name;
     robot.reset();
