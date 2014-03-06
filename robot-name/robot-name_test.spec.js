@@ -6,7 +6,7 @@ describe("Robot", function() {
     expect(robot.name).toMatch(/\w{2}\d{3}/);
   });
 
-  xit("name is the same each time", function() {
+  it("name is the same each time", function() {
     var robot = new Robot();
     expect(robot.name).toEqual(robot.name);
   });
