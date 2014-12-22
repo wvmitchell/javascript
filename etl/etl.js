@@ -1,9 +1,9 @@
 var Etl = function(toTransform) {
   var transformed = {};
-  for(var key in toTransform) {
-    var values = toTransform[key];
+  for(var property in toTransform) {
+    var values = toTransform[property];
     values.forEach(function(element, index, array) {
-      transformed[element.toLowerCase()] = parseInt(key);
+      transformed[element.toLowerCase()] = parseInt(property, 10);
     });
   }
   return transformed;
