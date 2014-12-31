@@ -8,7 +8,7 @@ var letterScores = {
   'q' : 10, 'z' : 10
 };
 
-module.exports = function(word){
+var score = function(word){
   var word = word === null ? '' : word.toLowerCase();
   var score = 0;
   for(var i = 0, length = word.length; i < length; i += 1) {
@@ -16,3 +16,5 @@ module.exports = function(word){
   }
   return score;
 }
+
+module.exports = score;
